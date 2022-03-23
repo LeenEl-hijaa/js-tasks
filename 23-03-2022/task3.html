@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="select" style="display: block;" onchange="changeImg()">
+        <option hidden selected value="">Select</option>
+  <option value="https://dejpknyizje2n.cloudfront.net/svgcustom/clipart/preview/palestine-flag-sticker-29896-550x550.png">Palestine</option>
+  <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODc8giqV4hwq7KevCtArZrKUd7ABykP6edGOelojhNuB6YpY4XROxS2Z0j2L7l0cCIjE&usqp=CAU">Jordan</option>
+  <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxfdCfFqXXVHBd0yTap2MNQidsUfKtsajqcwixhBmc2lKx8rZUxYo_9ghtMFMNcDUec8c&usqp=CAU">UK</option>
+  <option value="https://www.seekpng.com/png/detail/338-3380353_png-50-px-canada-flag-icon-png.png">Canada</option>
+  <option value=" https://cdn.britannica.com/34/3034-004-1A765B57/Flag-Algeria.jpg">Algeria</option>
+    </select>
+    <img id="img" src="https://pharem-project.eu/wp-content/themes/consultix/images/no-image-found-360x250.png" alt="">
+    <script>
+function changeImg(){
+let x = document.getElementById('select').value;
+document.getElementById('img').src=x;
+}
+    </script>
+</body>
+</html>
