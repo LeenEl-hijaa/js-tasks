@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="master.css" />
+    <title>Document</title>
+    <style>
+      #card {
+        border: 3px solid rgb(131, 114, 114);
+        width: 250px;
+        height: 250px;
+        display: none;
+        background-color: rgba(128, 128, 128, 0.192);
+        line-height: 30px;
+
+      }
+     
+    </style>
+  </head>
+  <body>
+    <section>
+      <form>
+        <label for="sub"> subject:</label>
+        <input type="text" id="sub"/><br /><br />
+
+      
+
+        <textarea id="desc" rows="4" cols="30" name="comment" form="usrform">
+Brief Description about the project....</textarea
+        ><br />
+
+        <label for="user">User Types:</label>
+        <input type="text" id="user" /><br /><br />
+
+        <label for="tech">Technology used:</label>
+        <input type="text" id="tech" /><br /><br />
+ <br/>
+
+        <input type="submit" onclick="store()" />
+
+        <div id="card"></div>
+<div id="image">
+        <img id="img" src="" alt="" width="200px" height="200px">
+      </div>
+      </form>
+    </section>
+    <script src="task2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input, button{
+            padding: 7px;
+            height: 30px;
+        }
+        fieldset{
+            margin-bottom: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Data</legend>
+        <input id="inpkey" type="text" placeholder="Enter Key">
+        <input id="inpvalue" type="text" placeholder="Enter value">
+        <button id="btn" type="button">Submit</button>
+    </fieldset>
+    <fieldset>
+    <legend>Data Output</legend>
+    <div id="lsoutput">
+
+    </div>
+    </fieldset>
+    <script>
+        const inpkey = document.getElementById("inpkey");
+        const inpvalue = document.getElementById("inpvalue");
+        const btn = document.getElementById("btn");
+        const lsoutput = document.getElementById("lsoutput");
+        
+        btn.onclick = function(){
+        const key = inpkey.value;
+        const value = inpvalue.value;
+
+        console.log(key)
+        console.log(value);
+
+        if (key && value){
+            localStorage.setItem(key, value);
+            location.reload();
+        }
+        };
+        
+        for (let i = 0; i < localStorage.length; i++){
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            lsoutput.innerHTML += `${key}: ${value} <br/>`;
+        }
+
+</script>
+</body>
+</html>
